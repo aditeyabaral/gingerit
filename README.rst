@@ -23,6 +23,9 @@ Installation:
 Usage:
 ------
 
+Python
+~~~~~~~~
+
 ::
 
     from gingerit.gingerit import GingerIt
@@ -32,11 +35,26 @@ Usage:
     parser = GingerIt()
     parser.parse(text)
 
-TODO:
------
+Command Line
+~~~~~~~~
 
-    - Commandline Tool
+::
+    $ python gingerit.py [-h] -i INPUT [-o] [-f FILE] [-t {split,truncate}] [-v VERIFY]
 
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        Input text or path to text file
+  -o, --output          Print detailed output
+  -f FILE, --file FILE  Redirect to output file
+  -t {split,truncate}, --truncation {split,truncate}
+                        Truncation strategy if the text length exceeds 600 characters
+  -v VERIFY, --verify VERIFY
+
+A simple example is as follows:
+
+::
+    $ python gingerit.py -i "The smelt of fliwers bring back memories."
+    $ The smell of flowers brings back memories.
 
 Thanks
 ------

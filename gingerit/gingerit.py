@@ -65,10 +65,14 @@ def get_text_content(_input, truncation_strategy):
     '''
     Obtain text content from command line input or from a text file
     '''
-    if Path(_input).is_file():
-        with open(_input, 'r') as f:
-            text = f.read()
-    else:
+    try:
+        if Path(_input).is_file():
+            with open(_input, 'r') as f:
+                text = f.read()
+        else:
+            text = _input
+    except OSError:
+        # if the input text is too long, it cannot be a file and will throw an OSError
         text = _input
     text = text.strip()
 
