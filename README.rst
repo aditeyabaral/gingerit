@@ -26,7 +26,7 @@ Usage:
 Python
 ~~~~~~~~
 
-::
+.. code-block:: python
 
     from gingerit.gingerit import GingerIt
 
@@ -38,9 +38,10 @@ Python
 Command Line
 ~~~~~~~~
 
-::
-    $ python gingerit.py [-h] -i INPUT [-o] [-f FILE] [-t {split,truncate}] [-v VERIFY]
+.. code-block:: sh
 
+  python gingerit.py [-h] -i INPUT [-o] [-f FILE] [-t {split,truncate}] [-v VERIFY]
+  
   -h, --help            show this help message and exit
   -i INPUT, --input INPUT
                         Input text or path to text file
@@ -52,9 +53,10 @@ Command Line
 
 A simple example is as follows:
 
-::
-    $ python gingerit.py -i "The smelt of fliwers bring back memories."
-    $ The smell of flowers brings back memories.
+.. code-block:: sh
+
+    python gingerit.py -i "The smelt of fliwers bring back memories."
+    The smell of flowers brings back memories.
 
 Thanks
 ------
